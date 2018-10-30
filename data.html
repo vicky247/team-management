@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Management System</title>
+
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
+                <a class="navbar-brand" href="index.html" style="color: white; background-color: red;">
+                    <span class="nav-color">TMS</span>
+                </a>
+            </div>
+                
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Year <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="2013.html">2013</a></li>
+                                <li><a href="2014.html">2014</a></li>
+                                <li><a href="2015.html">2015</a></li>
+                                <li><a href="2016.html">2016</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="comparisons.html">Comparisons</a></li>
+                    <li><a href="data.html">Data</a></li>
+					<li><a href="login.html">logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Visualizations -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2>Data</h2>
+                        <hr>
+                        <p class="text2">The below table displays the data used for creating prediction visualizations</p>
+                        <div class="col-md-12">
+                                <table class="table table-bordered table-hover table-condensed">
+                                        <tbody><tr>
+                                        <td>PTS</td>
+                                        <td>Predicted PTS</td>
+                                        <td>Name</td>
+                                        <td>Year of Joining</td>
+                                        <td>Age</td>
+										<td>Department</td>
+                                        <td>Team Leader Name</td>
+                                        <td>Current Project</td>
+                                        <td>Attendance</td>
+                                        <td>Sales</td>
+                                        <td>No.of Projects completed</td>
+                                        <td>Task Reports</td>
+                                        <td>Team Meetings Attended</td>
+                                        <td>Additional Job Roles</td>
+                                        <td>No.of extra hours worked</td>
+                                        </tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>sharma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>78</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>Verma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>640.0</td>
+                                        <td>865.0</td>
+                                        <td>rakesh</td>
+                                        <td>2016.0</td>
+                                        <td>23.0</td>
+                                        <td>vinay</td>
+                                        <td>member</td>
+                                        <td>analytics </td>
+                                        <td>79</td>
+                                        <td>435</td>
+                                        <td>37.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>780.0</td>
+                                        <td>670.0</td>
+                                        <td>tirupathi</td>
+                                        <td>2012.0</td>
+                                        <td>26.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>80</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>26.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>830.0</td>
+                                        <td>813.0</td>
+                                        <td>david</td>
+                                        <td>2015.0</td>
+                                        <td>22</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>70</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>980.0</td>
+                                        <td>830.0</td>
+                                        <td>rohit</td>
+                                        <td>2010.0</td>
+                                        <td>30.0</td>
+                                        <td>---</td>
+                                        <td>team leader</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>49.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                                            <tr>
+                                        <td>782.0</td>
+                                        <td>273.0</td>
+                                        <td>vinay</td>
+                                        <td>2011.0</td>
+                                        <td>23.0</td>
+                                        <td>--</td>
+                                        <td>team leader</td>
+                                        <td>analytics </td>
+                                        <td>85</td>
+                                        <td>435</td>
+                                        <td>28.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>sharma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>78</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>Verma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>640.0</td>
+                                        <td>865.0</td>
+                                        <td>rakesh</td>
+                                        <td>2016.0</td>
+                                        <td>23.0</td>
+                                        <td>vinay</td>
+                                        <td>member</td>
+                                        <td>analytics </td>
+                                        <td>79</td>
+                                        <td>435</td>
+                                        <td>37.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>780.0</td>
+                                        <td>670.0</td>
+                                        <td>tirupathi</td>
+                                        <td>2012.0</td>
+                                        <td>26.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>80</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>26.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>830.0</td>
+                                        <td>813.0</td>
+                                        <td>david</td>
+                                        <td>2015.0</td>
+                                        <td>22</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>70</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>980.0</td>
+                                        <td>830.0</td>
+                                        <td>rohit</td>
+                                        <td>2010.0</td>
+                                        <td>30.0</td>
+                                        <td>---</td>
+                                        <td>team leader</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>49.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                                            <tr>
+                                        <td>782.0</td>
+                                        <td>273.0</td>
+                                        <td>vinay</td>
+                                        <td>2011.0</td>
+                                        <td>23.0</td>
+                                        <td>--</td>
+                                        <td>team leader</td>
+                                        <td>analytics </td>
+                                        <td>85</td>
+                                        <td>435</td>
+                                        <td>28.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>Verma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>78</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>Verma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>640.0</td>
+                                        <td>865.0</td>
+                                        <td>rakesh</td>
+                                        <td>2016.0</td>
+                                        <td>23.0</td>
+                                        <td>vinay</td>
+                                        <td>member</td>
+                                        <td>analytics </td>
+                                        <td>79</td>
+                                        <td>435</td>
+                                        <td>37.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>780.0</td>
+                                        <td>670.0</td>
+                                        <td>tirupathi</td>
+                                        <td>2012.0</td>
+                                        <td>26.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>80</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>26.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>830.0</td>
+                                        <td>813.0</td>
+                                        <td>david</td>
+                                        <td>2015.0</td>
+                                        <td>22</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>70</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>980.0</td>
+                                        <td>830.0</td>
+                                        <td>rohit</td>
+                                        <td>2010.0</td>
+                                        <td>30.0</td>
+                                        <td>---</td>
+                                        <td>team leader</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>49.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                                            <tr>
+                                        <td>782.0</td>
+                                        <td>273.0</td>
+                                        <td>vinay</td>
+                                        <td>2011.0</td>
+                                        <td>23.0</td>
+                                        <td>--</td>
+                                        <td>team leader</td>
+                                        <td>analytics </td>
+                                        <td>85</td>
+                                        <td>435</td>
+                                        <td>28.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>Verma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>78</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>Verma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>640.0</td>
+                                        <td>865.0</td>
+                                        <td>rakesh</td>
+                                        <td>2016.0</td>
+                                        <td>23.0</td>
+                                        <td>vinay</td>
+                                        <td>member</td>
+                                        <td>analytics </td>
+                                        <td>79</td>
+                                        <td>435</td>
+                                        <td>37.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>780.0</td>
+                                        <td>670.0</td>
+                                        <td>tirupathi</td>
+                                        <td>2012.0</td>
+                                        <td>26.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>80</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>26.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>830.0</td>
+                                        <td>813.0</td>
+                                        <td>david</td>
+                                        <td>2015.0</td>
+                                        <td>22</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>70</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>980.0</td>
+                                        <td>830.0</td>
+                                        <td>rohit</td>
+                                        <td>2010.0</td>
+                                        <td>30.0</td>
+                                        <td>---</td>
+                                        <td>team leader</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>49.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                                            <tr>
+                                        <td>782.0</td>
+                                        <td>273.0</td>
+                                        <td>vinay</td>
+                                        <td>2011.0</td>
+                                        <td>23.0</td>
+                                        <td>--</td>
+                                        <td>team leader</td>
+                                        <td>analytics </td>
+                                        <td>85</td>
+                                        <td>435</td>
+                                        <td>28.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>Verma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>78</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>940.0</td>
+                                        <td>813.0</td>
+                                        <td>Verma</td>
+                                        <td>2015.0</td>
+                                        <td>23.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>640.0</td>
+                                        <td>865.0</td>
+                                        <td>rakesh</td>
+                                        <td>2016.0</td>
+                                        <td>23.0</td>
+                                        <td>vinay</td>
+                                        <td>member</td>
+                                        <td>analytics </td>
+                                        <td>79</td>
+                                        <td>435</td>
+                                        <td>37.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>780.0</td>
+                                        <td>670.0</td>
+                                        <td>tirupathi</td>
+                                        <td>2012.0</td>
+                                        <td>26.0</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>80</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>26.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>830.0</td>
+                                        <td>813.0</td>
+                                        <td>david</td>
+                                        <td>2015.0</td>
+                                        <td>22</td>
+                                        <td>rohit</td>
+                                        <td>member</td>
+                                        <td>logistics </td>
+                                        <td>70</td>
+                                        <td>435</td>
+                                        <td>41.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                        <tr>
+                                        <td>980.0</td>
+                                        <td>830.0</td>
+                                        <td>rohit</td>
+                                        <td>2010.0</td>
+                                        <td>30.0</td>
+                                        <td>---</td>
+                                        <td>team leader</td>
+                                        <td>logistics </td>
+                                        <td>90</td>
+                                        <td>435</td>
+                                        <td>49.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>4</td>
+                                        <td>22.0</td>
+                                        </tr>
+                                                            <tr>
+                                        <td>782.0</td>
+                                        <td>273.0</td>
+                                        <td>vinay</td>
+                                        <td>2011.0</td>
+                                        <td>23.0</td>
+                                        <td>--</td>
+                                        <td>team leader</td>
+                                        <td>analytics </td>
+                                        <td>85</td>
+                                        <td>435</td>
+                                        <td>28.0</td>
+                                        <td>----</td>
+                                        <td>15.0</td>
+                                        <td>8</td>
+                                        <td>20.0</td>
+                                        </tr>
+                                        <tr>
+                                        
+                                        </tbody></table>    
+                                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+    
+    <!-- Custom Footer -->
+    <footer>
+            <p style="text-align: center">
+                <i class="glyphicon glyphicon-copyright-mark">Copyright Mustangs 2018</i>
+            </p>
+        </footer>
+    
+</body>
+</html>
